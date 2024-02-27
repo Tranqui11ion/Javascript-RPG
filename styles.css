@@ -1,0 +1,92 @@
+:root {
+    --primary-color: #53A2BE;
+    --secondary-color: #1D84B5;
+    --bg-color: #0A2239;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    transition-duration: 300ms;
+}
+
+
+body {
+    background-color: var(--bg-color);
+}
+
+#text {
+    display: flex;
+    border: 2px solid var(--secondary-color); /* Border around the content */
+    border-radius: 30px;
+    background-color: var(--bg-color);
+    color: #B4D2E7;
+    padding: 30px;
+}
+
+#game {
+    background-color: var(--bg-color);    
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full height of the viewport */
+}
+#gameWindow {
+    
+    padding: 20px; /* Space between the content and the border */
+    width: 400px; /* Fixed width */
+    height: 400px; /* Fixed height */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    overflow: none; /* Adds scrollbars if content overflows */
+    flex-direction: column;
+}
+
+#controls, 
+#stats {
+    display: flex;
+    color: var(--primary-color);
+    padding: 25px;
+    
+}
+
+#controls {
+    gap: 35px;
+}
+.stat {
+    padding-right: 10px ;
+}
+
+#monsterStats {
+    display: none;
+    color: #ffffff;
+    padding: 5px;
+    background-color: #c70d0d;
+}
+
+button {
+    cursor: pointer;
+    color: var(--primary-color);
+    border-radius: 25px;
+    background-color: transparent;
+    /* Transparent Gradient - adjust alpha values for transparency */
+    background-image: linear-gradient(
+        rgba(var(--primary-color-rgb), 0.5), /* Half transparent primary color */
+        rgba(var(--secondary-color-rgb), 0.5) /* Half transparent secondary color */
+    );
+
+    border: 3px solid var(--secondary-color);
+    padding: 15px;
+    width: 100px;
+    height: 75px;
+    
+}
+
+button:hover {
+    opacity: .7;
+}
